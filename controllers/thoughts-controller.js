@@ -1,14 +1,3 @@
-// const {
-//     getAllThoughts,
-//     getThoughtById,
-//     addThought,
-//     updateThought,
-//     removeThought,
-//     addReaction,
-//     removeReaction
-// }
-
-
 const { User, Thought } = require('../models');
 
 const thoughtsController = {

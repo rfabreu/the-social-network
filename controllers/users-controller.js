@@ -1,14 +1,3 @@
-// const {
-//     getAllUsers,
-//     getUserById,
-//     createUser,
-//     updateUser,
-//     removeUser,
-//     addFriend,
-//     removeFriend };
-
-
-
 const { User, Thought } = require('../models');
 
 const usersController = {
