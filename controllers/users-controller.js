@@ -20,8 +20,8 @@ const usersController = {
             });
     },
 
-    getUserById({ params }, res) {
-        User.findOne({ _id: params.id })
+    getUserById(req, res) {
+        User.findOne({ _id: req.params.id })
             .populate({
                 path: 'friends',
                 select: '-__v'
