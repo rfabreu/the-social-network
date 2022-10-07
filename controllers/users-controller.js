@@ -22,13 +22,11 @@ const usersController = {
 
     getUserById(req, res) {
         User.findOne({ _id: req.params.id })
-            .populate({
-                path: 'friends',
-                select: '-__v'
-            })
             .select('-__v')
+            .populate('friends')
+            .populate('thoughts')
             .then(dbUserData => {
-                if (dbUserData) {
+                if (!dbUserData) {
                     res.status(404).json({ message: 'No users found! Try another ID.' });
                     return;
                 }
